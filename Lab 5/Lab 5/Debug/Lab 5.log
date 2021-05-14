@@ -1,4 +1,7 @@
 ﻿  Source.cpp
-C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(111,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(117,23): warning C4018: '<': signed/unsigned mismatch
-  Lab 5.vcxproj -> C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Debug\Lab 5.exe
+G:\lab_rep\Laba-5\Lab 5\Lab 5\Source.cpp(60,32): warning C4552: ">": результат выражения не используется
+G:\lab_rep\Laba-5\Lab 5\Lab 5\Source.cpp(60,1): error C2429: для функция языка "Инструкции INIT в if/switch" нужен флаг компилятора "/std:c++17"
+G:\lab_rep\Laba-5\Lab 5\Lab 5\Source.cpp(60,1): error C2059: синтаксическая ошибка: )
+G:\lab_rep\Laba-5\Lab 5\Lab 5\Source.cpp(61,1): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+G:\lab_rep\Laba-5\Lab 5\Lab 5\Source.cpp(123,23): warning C4018: <: несоответствие типов со знаком и без знака
+G:\lab_rep\Laba-5\Lab 5\Lab 5\Source.cpp(129,23): warning C4018: <: несоответствие типов со знаком и без знака
