@@ -1,4 +1,6 @@
 #include<iostream>
+#include <string>
+#include <cmath>
 using namespace std;
 class Location {
 
@@ -20,17 +22,27 @@ public:
 class R_tree {
 
 };
-class Rectangle {
+class Node {
 	Location up_left;
 	Location up_right;
 	Location down_left;
 	Location down_right;
 public:
-	Rectangle(Location up_left, Location up_right, Location down_left, Location down_right) :up_left(up_left), up_right(up_right),
+	Node(Location up_left, Location up_right, Location down_left, Location down_right) :up_left(up_left), up_right(up_right),
 		down_left(down_left), down_right(down_right) {
 	}
+	double lenght(double longitude1, double latitude1, double longitude2, double latitude2) {
+		double x1 = (longitude1 * 2 * acos(0.0)) / 180;
+		double y1 = (latitude1 * 2 * acos(0.0)) / 180;
+		double x2 = (longitude2 * 2 * acos(0.0)) / 180;
+		double y2 = (latitude2 * 2 * acos(0.0)) / 180;
 
+		double result = 2 * asin(sqrt(pow(sin((x2 - x1) / 2), 2) + cos(x2) * cos(x1) * pow(sin((y2 - y1) / 2), 2)));
+	}
 };
+
+
+
 int main() {
 
 }
