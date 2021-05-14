@@ -143,7 +143,7 @@ public:
 
 	}
 	void reading_from_file(string naming) {
-		ifstream inFile("C:/Users/User/coding/Labs 1.2/Laba-5/Lab 5/Lab 5/file.csv");
+		ifstream inFile("G:/lab_rep/Laba-5/Lab 5/Lab 5/file.csv");
 		if (!inFile.is_open()) {
 			cout << "Cannot open the file" << endl;
 		}
@@ -190,7 +190,21 @@ public:
 
 	void search(double latitude, double longitude, double radius, Node node)
 	{
-
+		if (node.isinside(Location(latitude, longitude, "", "", "", "")) || node.lenght(latitude, longitude, node.up_left.latitude, longitude) < radius || node.lenght(latitude, longitude, node.up_right.latitude, longitude) < radius || node.lenght(latitude, longitude, latitude, node.up_left.longitude) < radius || node.lenght(latitude, longitude, latitude, node.down_left.longitude) < radius)
+		{
+			for (int i = 0; i < node.locations_v.size(); i++)
+			{
+				if (node.lenght(latitude, longitude, node.locations_v[i].latitude, node.locations_v[i].longitude) < radius)
+				{
+					cout << node.locations_v[i].name << " " << node.locations_v[i].type << " " << node.locations_v[i].subType << " " << node.locations_v[i].address << " " << node.locations_v[i].latitude << " " << node.locations_v[i].longitude << endl;
+				}
+			}
+			if (!node.kid.empty())
+			{
+				search(latitude, longitude, radius, node.kid[0]);
+				search(latitude, longitude, radius, node.kid[1]);
+			}
+		}
 	}
 };
 
@@ -199,8 +213,12 @@ public:
 
 
 int main() {
+	setlocale(LC_CTYPE, "");
 	R_tree Tree;
-	Tree.reading_from_file("C:/Users/User/coding/Labs 1.2/Laba-5/Lab 5/Lab 5/file.csv");
+	Tree.reading_from_file("G:/lab_rep/Laba-5/Lab 5/Lab 5/file.csv");
+	Tree.search(50.39195, 30.45944, 500, Tree.root->kid[0]);
+	Tree.search(50.39195, 30.45944, 500, Tree.root->kid[1]);
+
 }
 
 double maxFrom(double a, double b) {
