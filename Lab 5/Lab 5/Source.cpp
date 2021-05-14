@@ -6,7 +6,8 @@
 #define rad 6367444.65;
 using namespace std;
 
-
+double maxFrom(double, double);
+double minFrom(double, double);
 class Location {
 
 	
@@ -59,6 +60,17 @@ public:
 			&& loc.latitude >= this->up_left.latitude && loc.latitude <= this->up_right.latitude)) 
 		{
 			//finish up
+			this->up_left.longitude = min(this->up_left.longitude, loc.longitude);
+			this->down_left.longitude = max(this->down_left.longitude, loc.longitude);
+			this->up_right.longitude = min(this->up_left.longitude, loc.longitude);
+			this->down_right.longitude = max(this->down_left.longitude, loc.longitude);
+
+			this->down_left.latitude = min(this->down_left.latitude, loc.latitude);
+			this->up_left.latitude = min(this->down_left.latitude, loc.latitude);
+			this->down_right.latitude = max(this->down_right.latitude, loc.latitude);
+			this->up_right.latitude = max(this->down_right.latitude, loc.latitude);
+
+
 		}
 		locations_v.push_back(loc);
 
@@ -133,4 +145,21 @@ public:
 int main() {
 	R_tree Tree;
 	Tree.reading_from_file("C:/Users/User/coding/Labs 1.2/Laba-5/Lab 5/Lab 5/file.csv");
+}
+
+double maxFrom(double a, double b) {
+	if (a > b) {
+		return a;
+	}
+	else {
+		return b;
+	}
+}
+double minFrom(double a, double b) {
+	if (a < b) {
+		return a;
+	}
+	else {
+		return b;
+	}
 }

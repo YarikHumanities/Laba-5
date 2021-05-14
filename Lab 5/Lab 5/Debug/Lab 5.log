@@ -1,4 +1,4 @@
 ﻿  Source.cpp
-C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(99,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(105,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(111,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(117,23): warning C4018: '<': signed/unsigned mismatch
   Lab 5.vcxproj -> C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Debug\Lab 5.exe
