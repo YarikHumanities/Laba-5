@@ -1,7 +1,10 @@
 #include<iostream>
 #include <string>
 #include <cmath>
+#include <fstream>
 using namespace std;
+
+
 class Location {
 
 private:
@@ -16,10 +19,11 @@ public:
 	Location(double latitude_, double longitude_, string type_, string subType_, string name_, string address_) : latitude(latitude_),
 		longitude(longitude_), type(type_), subType(subType_), name(name_), address(address_) {
 	}
-
-
-};
-class R_tree {
+	void print_loc(/*double latitude, double longitude, string type, string subType, string name, string address*/) {
+		cout << "Latitude: " << this->latitude << " Longitude: " << this->longitude << " Type: " << this->type << " SubType: " << 
+			this->subType << " Name: " << this->name <<
+			"Address: " << this->address << endl;
+	}
 
 };
 class Node {
@@ -43,6 +47,66 @@ public:
 
 
 
-int main() {
 
+
+class R_tree {
+public:
+
+	Node* root;
+
+	R_tree() {
+		this->root = nullptr;
+
+	}
+	void reading_from_file(string naming) {
+		ifstream inFile("C:/Users/User/coding/Labs 1.2/Laba-5/Lab 5/Lab 5/file.csv");
+		if (!inFile.is_open()) {
+			cout << "Cannot open the file" << endl;
+		}
+		else {
+			cout << "File opened" << endl;
+			string latitude;
+			string longitude;
+			string type;
+			string subType;
+			string name;
+			string address;
+			while (!inFile.eof()) {
+				getline(inFile, latitude, ';');
+				if (latitude == "\n") {
+					break;
+				}
+				for (int i = 0; i < latitude.size(); i++) {
+					if (latitude[i] == ',') {
+						latitude[i] = '.';
+					}
+				}
+				getline(inFile, longitude, ';');
+				for (int i = 0; i < longitude.size(); i++) {
+					if (longitude[i] == ',') {
+						longitude[i] = '.';
+					}
+				}
+				getline(inFile, type, ';');
+				getline(inFile, subType, ';');
+				getline(inFile, name, ';');
+				getline(inFile, address, ';');
+			
+				//stod() - string to double
+
+				Location loc(stod(latitude), stod(longitude), type, subType, name, address);
+				loc.print_loc();
+			}
+		}
+
+	}
+};
+
+
+
+
+
+int main() {
+	R_tree Tree;
+	Tree.reading_from_file("C:/Users/User/coding/Labs 1.2/Laba-5/Lab 5/Lab 5/file.csv");
 }
