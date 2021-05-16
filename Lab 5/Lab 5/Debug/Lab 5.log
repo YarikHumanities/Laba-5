@@ -1,8 +1,0 @@
-﻿  Node.cpp
-  R_tree.cpp
-G:\lab_rep\Laba-5\Lab 5\Lab 5\R_tree.cpp(18,31): warning C4018: <: несоответствие типов со знаком и без знака
-G:\lab_rep\Laba-5\Lab 5\Lab 5\R_tree.cpp(23,31): warning C4018: <: несоответствие типов со знаком и без знака
-G:\lab_rep\Laba-5\Lab 5\Lab 5\R_tree.cpp(55,27): warning C4018: <: несоответствие типов со знаком и без знака
-  Source.cpp
-  Создание кода...
-  Lab 5.vcxproj -> G:\lab_rep\Laba-5\Lab 5\Debug\Lab 5.exe
