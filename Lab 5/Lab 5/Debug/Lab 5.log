@@ -1,16 +1,2 @@
-<<<<<<< HEAD
-﻿  Node.cpp
-  R_tree.cpp
-G:\lab_rep\Laba-5\Lab 5\Lab 5\R_tree.cpp(18,31): warning C4018: <: несоответствие типов со знаком и без знака
-G:\lab_rep\Laba-5\Lab 5\Lab 5\R_tree.cpp(23,31): warning C4018: <: несоответствие типов со знаком и без знака
-G:\lab_rep\Laba-5\Lab 5\Lab 5\R_tree.cpp(55,27): warning C4018: <: несоответствие типов со знаком и без знака
-  Source.cpp
-  Создание кода...
+﻿  main.cpp
   Lab 5.vcxproj -> G:\lab_rep\Laba-5\Lab 5\Debug\Lab 5.exe
-=======
-﻿  Source.cpp
-C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(230,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(236,23): warning C4018: '<': signed/unsigned mismatch
-C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Lab 5\Source.cpp(271,22): warning C4018: '<': signed/unsigned mismatch
-  Lab 5.vcxproj -> C:\Users\User\coding\Labs 1.2\Laba-5\Lab 5\Debug\Lab 5.exe
->>>>>>> main
