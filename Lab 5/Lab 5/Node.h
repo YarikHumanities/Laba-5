@@ -16,10 +16,16 @@ public:
 	double lenghth(double& longitude1, double& latitude1, double& longitude2, double& latitude2);
 	void formTree();
 
+	//four corners of the node
+
 	Location upleft;
 	Location downleft;
 	Location upright;
 	Location downright;
+
+	//all of the locations that is contained in node - LEAVES
 	vector<Location> locations;
+
+	//all of the kids that is contained in node - ONLY OTHER NODES
 	vector<Node> kid;
 };
